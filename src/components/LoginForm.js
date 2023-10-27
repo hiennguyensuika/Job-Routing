@@ -33,7 +33,7 @@ function LoginForm({ callback }) {
     event.preventDefault();
   };
   const handleLogin = () => {
-    auth.singin(username, callback);
+    auth.signin(username, callback);
   };
 
   return (

@@ -56,11 +56,11 @@ function Navigation() {
   const q = searchParams.get("q");
   const navigate = useNavigate();
 
-  const handlClickLogin = (event) => {
+  const handleClickLogin = (event) => {
     navigate("/login");
   };
 
-  const handlClickLogout = (event) => {
+  const handleClickLogout = (event) => {
     auth.signout(() => {
       navigate("/");
     });
@@ -110,7 +110,7 @@ function Navigation() {
           {auth?.user ? (
             <>
               <Button
-                onClick={handlClickLogout}
+                onClick={handleClickLogout}
                 variant="contained"
                 startIcon={<LogoutIcon />}
               >
@@ -123,7 +123,7 @@ function Navigation() {
             </>
           ) : (
             <Button
-              onClick={handlClickLogin}
+              onClick={handleClickLogin}
               variant="contained"
               startIcon={<LoginIcon />}
             >
